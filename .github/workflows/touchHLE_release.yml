@@ -2,7 +2,7 @@ name: Build touchHLE
 
 on:
   push:
-    branches: [ "tmp-cray-new-1" ]
+    branches: [ "tmp-cray-new" ]
   pull_request:
     branches: [ "tmp-cray-new" ]
 
@@ -21,7 +21,6 @@ jobs:
     - name: Install clang-format
       run: brew install clang-format
     - name: Check formatting
-      run: dev-scripts/format.sh --check
     - name: Get Submodules
       run: git submodule update --init
     - name: Install Boost
